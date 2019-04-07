@@ -1,0 +1,61 @@
+{
+  "name": "dockerized-react-app",
+  "version": "1.0.0",
+  "description": "Dockerized React application",
+  "author": "Ben Dunlop",
+  "private": true,
+  "dependencies": {
+    "@babel/core": "^7.3.4",
+    "@storybook/react": "^5.0.1",
+    "@types/jest": "24.0.11",
+    "@types/node": "^11.11.3",
+    "@types/react": "16.8.8",
+    "@types/react-dom": "16.8.2",
+    "babel-loader": "^8.0.5",
+    "node-sass": "^4.11.0",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "react-scripts": "2.1.8",
+    "typescript": "^3.3.3333"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "test-coverage": "CI=true react-scripts test --env=jsdom --coverage --collectCoverageFrom=src/**/*.tsx --collectCoverageFrom=!src/**/*.stories.jsx",
+    "test-ci": "CI=true react-scripts test",
+    "eslint": "eslint src -c ./.eslintrc.js --ext 'js,ts,tsx'",
+    "sass-lint": "sass-lint -c ./.sass-lint.yml -v -q",
+    "lint": "yarn run eslint && yarn run sass-lint",
+    "storybook": "start-storybook",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "@types/enzyme": "^3.9.0",
+    "@types/enzyme-adapter-react-16": "^1.0.5",
+    "@typescript-eslint/eslint-plugin": "^1.4.2",
+    "@typescript-eslint/parser": "^1.4.2",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.11.2",
+    "enzyme-to-json": "^3.3.5",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+    "sass-lint": "^1.12.1"
+  }
+}

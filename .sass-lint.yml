@@ -1,0 +1,28 @@
+files:
+  include: 'src/**/*.scss'
+rules:
+  class-name-format:
+    - 2
+    - allow-leading-underscore: false
+      convention: camelcase
+  final-newline:
+    - 2
+    - include: true
+  hex-notation:
+    - 2
+    - uppercase
+  id-name-format:
+    - 2
+    - allow-leading-underscore: false
+      convention: hyphenatedlowercase
+  indentation:
+    - 2
+    - size: 2
+  leading-zero:
+    - 0
+  no-color-keywords: 
+    - 1
+  no-empty-rulesets:
+    - 2
+  no-trailing-zero:
+    - 0
