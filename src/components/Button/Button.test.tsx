@@ -3,7 +3,12 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 // Components
-import Button from './Button';
+import Button, { testFunction } from './Button';
+
+const params: Parameters<typeof testFunction> = [
+  'title',
+  12345,
+];
 
 describe('<Button />', () => {
   let component: any;

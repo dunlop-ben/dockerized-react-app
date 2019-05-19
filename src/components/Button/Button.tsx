@@ -3,6 +3,8 @@ import React, { FunctionComponent, MouseEvent, ReactChild } from 'react';
 
 import styles from './Button.module.scss';
 
+export const testFunction = (title: string, barcode: number) => ({ title, barcode });
+
 type Props = {
   children: ReactChild,
   onClick: (e: MouseEvent<HTMLElement>) => void,
