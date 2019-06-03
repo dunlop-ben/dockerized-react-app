@@ -22,7 +22,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "test-coverage": "CI=true react-scripts test --env=jsdom --coverage --collectCoverageFrom=src/**/*.tsx --collectCoverageFrom=!src/**/*.stories.jsx",
+    "test-coverage": "CI=true react-scripts test --env=jsdom --coverage --collectCoverageFrom=src/**/*.{ts,tsx} --collectCoverageFrom=!src/**/*.stories.jsx",
     "test-ci": "CI=true react-scripts test",
     "eslint": "eslint src -c ./.eslintrc.js --ext 'js,jsx,ts,tsx'",
     "sass-lint": "sass-lint -c ./.sass-lint.yml -v -q",

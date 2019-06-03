@@ -1,0 +1,19 @@
+# Docker Compose version number
+version: '3'
+services:
+  # Service name followed by container configuration
+  web:
+    # Optional - image tag/name
+    image: bdunlop/dockerized-react-app-dev
+    build:
+      # Path to a directory containing a Dockerfile
+      context: .
+      # Optional - alternate Dockerfile
+      dockerfile: Dockerfile.dev
+    # Port mapping
+    ports:
+      - "3000:3000"
+    # Volumes mount
+    volumes: 
+      - /usr/app/node_modules
+      - ./src:/usr/app/src
