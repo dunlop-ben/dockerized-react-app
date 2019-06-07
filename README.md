@@ -88,6 +88,15 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ## Docker
 
+This is a Dockerized React application.
+
+### Development
+
+Run `sh start.dev.sh` to build and run a Docker container from a Docker image. Docker is configured to retain hot reloading and view the application on port 3000.
+
+### Production
+Run `start-prod.sh` to build and run a production ready Docker container.
+
 [comment]: <Docker configuration information and getting started guide>
 
 ## Learn More
