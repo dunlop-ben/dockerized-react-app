@@ -1,0 +1,36 @@
+# Super user permissions required for Docker use
+sudo: required
+services:
+    # Require a copy of Docker
+    - docker
+    # Install Yarn manually until pre-installed on Travis CI build images
+    # Source: https://yarnpkg.com/en/docs/install-ci
+    - sudo apt-key adv --keyserver pgp.mit.edu --recv D101F7899D41F3C3
+    - echo "deb http://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+    - sudo apt-get update -qq
+    - sudo apt-get install -y -qq yarn
+cache:
+  yarn: true
+
+# Before any dependencies are installed
+before_install:
+  # Build and tag image
+  - docker build -f Dockerfile.dev -t bdunlop/docker-frontend-dev:latest .
+
+# # Build scripts
+# script:
+#   # Run tests
+#   - docker run bdunlop/docker-frontend-dev yarn run test-ci
+
+# Build stages
+jobs:
+    include:
+      # Stage name
+      - stage: lint
+        # Job name
+        name: Lint
+        # Stage job
+        script:  docker run bdunlop/docker-frontend-dev yarn run lint
+      - stage: test
+        name: Unit test
+        script:  docker run bdunlop/docker-frontend-dev yarn run test-ci
