@@ -11,6 +11,15 @@ Run `sh start.dev.sh` to build and run a Docker container from a Docker image. D
 ### Production
 Run `sh start-prod.sh` to build and run a production ready Docker container.
 
+## Travis CI
+
+Travis CI is a hosted continuous integration service used to build and test this application.
+
+Travis CI is configured to create a build with two jobs:
+
+* run eslint; and
+* run unit testing.
+
 ## Testing
 
 [Jest](https://github.com/facebook/jest), [Enzyme](https://github.com/airbnb/enzyme) and [Enzyme to JSON](https://github.com/adriantoine/enzyme-to-json) are used to test this application.
